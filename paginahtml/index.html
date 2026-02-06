@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> para la mujer mas hermosa del universo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Special+Elite&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-bg: #fce4ec;
+            --pink-card: #f8bbd0;
+            --red-main: #d32f2f;
+            --border-color: #f06292;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--pink-bg);
+            font-family: 'Special Elite', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 400px;
+            height: 750px;
+            background: #fffafa;
+            border: 12px solid var(--pink-card);
+            position: relative;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+            box-sizing: border-box;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .active { display: flex; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; filter: blur(5px); }
+            to { opacity: 1; filter: blur(0); }
+        }
+
+        /* Estilos de Imágenes */
+        .photo-frame {
+            width: 100%;
+            height: 250px;
+            border: 8px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            object-fit: cover;
+            border-radius: 5px;
+            transform: rotate(-2deg);
+            margin-bottom: 20px;
+        }
+
+        .photo-last {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin: 15px 0;
+        }
+
+        /* Tipografía y Textos */
+        .header-info {
+            font-size: 9px;
+            width: 100%;
+            border-bottom: 1.5px solid var(--red-main);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 { font-family: 'Playfair Display', serif; color: var(--red-main); font-size: 26px; margin: 10px 0; }
+        .cursive { font-family: 'Dancing Script', cursive; color: var(--red-main); font-size: 30px; }
+        
+        /* Botones */
+        .btn {
+            background: white;
+            border: 2.5px solid var(--red-main);
+            color: var(--red-main);
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+            width: 85%;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-family: 'Special Elite', sans-serif;
+        }
+
+        .btn:hover { background: var(--red-main); color: white; transform: scale(1.05); }
+
+        .coupon {
+            border: 2px dashed var(--red-main);
+            padding: 12px;
+            margin: 5px;
+            font-size: 11px;
+            background: #fff0f0;
+            transform: rotate(1deg);
+        }
+
+        .grid-reasons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .grid-item { border: 1px solid #ffcdd2; padding: 5px; font-size: 10px; background: #fff; }
+
+        /* Estética Página Final */
+        #p5 {
+            background: linear-gradient(135deg, #d32f2f 0%, #ff5252 100%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="page active" id="p1">
+        <div class="header-info">
+            <span>Special Love Edition</span>
+            <span>2026</span>
+        </div>
+<a href="https://ibb.co/5gVCM9wv"><img src="https://i.ibb.co/DHnmVbTk/foto1-png.jpg" alt="foto1 png" border="0" style="width: 100%; max-width: 25A0px; border-radius: 10px;">></a>
+        <h1>Para: la mujer mas hermosa </h1>
+        <p>Te tengo una sorpresa muy especial preparada solo para ti...</p>
+        <p>Para descubrirla, toca el corazón</p>
+        <div class="heart-icon" style="cursor: pointer; font-size: 50px;" onclick="nextPage(2)">❤️</div>
+        <p style="font-size: 10px; margin-top: 20px;">By: Saamael</p>
+    </div>
+
+    <div class="page" id="p2">
+        <div class="header-info">
+            <span>Edición Especial</span>
+            <span>Saamael_Design</span>
+        </div>
+        <h1 style="font-size: 35px; margin-bottom: 0;">Valentine</h1>
+        <h2 style="margin-top: 0; font-size: 15px; letter-spacing: 5px;">MAGAZINE</h2>
+        <p class="cursive">Will you be my Valentine?</p>
+        <p>Después de que el mundo hiciera su magia y nuestros caminos se cruzaran, me di cuenta de algo: quiero este 14 de febrero contigo.</p>
+        
+        <div style="display: flex;">
+            <div class="coupon">VALE POR:<br>Una cita sorpresa</div>
+            <div class="coupon">VALE POR:<br>Besos infinitos</div>
+        </div>
+
+        <button class="btn" onclick="nextPage(3)">Ver razones</button>
+    </div>
+
+   <div class="page" id="p3">
+        <h1 style="font-size: 22px;">05 Razones por las que eres mi elección perfecta</h1>
+        <div class="grid-reasons">
+            <div class="grid-item"><b>1</b><br>Tienes la sonrisa más linda.</div>
+            <div class="grid-item">❤️</div>
+            <div class="grid-item"><b>3</b><br>Contigo cualquier día es especial.</div>
+            <div class="grid-item"><span class="cursive" style="font-size: 20px;">A</span></div>
+            <div class="grid-item"><b>2</b><br>Haces que mi corazón lata rápido.</div>
+            <div class="grid-item"><span class="cursive" style="font-size: 20px;">S</span></div>
+            <div class="grid-item"><b>4</b><br>Eres mi persona favorita.</div>
+            <div class="grid-item">❤️</div>
+            <div class="grid-item"><b>5</b><br>No imagino a nadie más a mi lado.</div>
+        </div>
+ <p style="font-weight: bold; margin-top: 30px; border-top: 1px solid var(--red-main); padding-top: 10px;">el destino lo confirma</p>
+        <p style="font-size: 12px;">No es coincidencia que estemos aquí hoy.</p>
+        <button class="btn" onclick="nextPage(4)">Siguiente</button>
+    </div>
+
+    <div class="page" id="p4">
+        <h1 style="margin-top: 50px;">la pregunta...</h1>
+        <p>Con el corazón en la mano:</p>
+        <p class="cursive" style="font-size: 35px;">¿Quieres ser mi San Valentín?</p>
+        <div style="margin-top: 30px;">
+            <button class="btn" onclick="nextPage(5)">¡SÍ, OBVIO!</button>
+            <button class="btn" onclick="nextPage(5)">SÍ, POR SUPUESTO ❤️</button>
+        </div>
+    </div>
+ 
+        
+ <div class="page" id="p5">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 32px; margin-top:0;"></h1>
+        <div class="doily-heart">
+            <div class="doily-text">Eres mi San<br>Valentín.</div>
+            <div class="locket-container">
+            </div>
+        </div>
+
+        <p style="font-size: 14px; line-height: 1.6; margin-top: 20px; font-family: 'Special Elite';">
+            Gracias por decir que sí.<br>
+            Prepárate para un día bonito,<br>
+            sonrisas inevitables<br>
+            y recuerdos que se van a quedar.
+        </p>
+    </div>
+        <p style="color: rgba(255,255,255,0.8); font-size: 10px; margin-top: 30px;">Official Valentine Certificate - 2026</p>
+    </div>
+
+</div>
+
+<script>
+    function nextPage(pageNum) {
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+        document.getElementById('p' + pageNum).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
